@@ -1,0 +1,97 @@
+// Colors
+$red : #8A0917;
+
+// Spacings
+$breather : 1.5em;
+
+
+@mixin container() {
+  max-width: 30em; 
+  margin: $breather auto;
+}
+
+@mixin button($border-thick, $border-color, $padding) {
+  border: $border-thick solid $border-color;
+  padding: $padding/1.2 $padding*3;
+}
+
+#yinyang {
+  height: 100vh;  
+
+  .black {
+    background-color: black;
+    color: white;
+    //   h1 {
+    // background-color: white;
+    // color: black;
+    // }
+  }
+
+  .white {
+    background-color: white;
+    color: black;
+    // h1 {
+    //   background-color: black;
+    //   color: white;
+    // }
+  }
+}
+
+body#virgin {
+   background: url("../img/bs1-invert-noise2.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; 
+
+  #opera {
+    .red {
+      h1 {
+        font-size: 2em;
+      }
+      background-color: $red;
+      height: 100vh;
+      color: white;
+      padding: $breather*4;
+      svg {
+        width: 4em;
+        height: 4em;
+        margin: 0 auto $breather * 4 auto;
+      }
+    } 
+  }
+
+}
+
+
+a.thief {
+      @include button(3px, black, $breather);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: Montserrat, Arial, sans-serif;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        border-color: black;
+        background-color: black;
+        color: white;
+      }
+}
+
+#cocaine {
+  height: 100vh;
+  @include container();
+  p.cut {
+    font-family: Georgia, 'Times New Roman', serif;
+    margin-bottom: $breather*6;
+  }
+}
+
+#luxus {
+  height: 100vh;
+  background: url("../img/prototype.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;   
+}

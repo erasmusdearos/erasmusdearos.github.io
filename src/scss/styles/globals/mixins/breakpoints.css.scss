@@ -1,0 +1,22 @@
+// Breakpoints
+// for media queries
+$small-screen:    48em;     // ~ 768px
+$medium-screen:   62.25em;  // ~ 996px
+$large-screen:    75em;     // ~ 1200px
+
+//Breakpoint mixin
+//   Example: @include media-query(handheld) { ... }
+@mixin media-query($media) {
+  @if $media == handheld {
+    @media only screen and (max-width: $small-screen) { @content; }
+  }
+  @else if $media == non-handheld {
+    @media only screen and (min-width: $small-screen + .0625) { @content; }
+  }
+  @else if $media == medium-screen {
+    @media only screen and (min-width: $small-screen + .0625) and (max-width: $large-screen - .0625) { @content; }
+  }
+  @else if $media == large-screen {
+    @media only screen and (min-width: $large-screen) { @content; }
+  }
+}

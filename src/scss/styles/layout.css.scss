@@ -1,0 +1,21 @@
+.main-wrapper {
+  margin: 0 auto;
+}
+
+@include media-query(handheld) {
+  .main-wrapper {
+    max-width: $small-screen - 10em;
+  }
+}
+
+@include media-query(medium-screen) {
+  .main-wrapper {
+    max-width: $medium-screen - 10em;
+  }
+}
+
+@include media-query(large-screen) {
+  .main-wrapper {
+    max-width: $large-screen - 10em;
+  }
+};
