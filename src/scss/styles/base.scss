@@ -1,6 +1,4 @@
-// Colors
-$red : #8A0917;
-
+@import "globals/variables";
 // Spacings
 $breather : 1.5em;
 
@@ -15,25 +13,23 @@ $breather : 1.5em;
   padding: $padding/1.2 $padding*3;
 }
 
+.icon-eda {
+  width: 3em;
+  height: 3em;
+  margin: $breather auto;
+}
+
 #yinyang {
   height: 100vh;  
 
   .black {
     background-color: black;
     color: white;
-    //   h1 {
-    // background-color: white;
-    // color: black;
-    // }
   }
 
   .white {
     background-color: white;
     color: black;
-    // h1 {
-    //   background-color: black;
-    //   color: white;
-    // }
   }
 }
 
@@ -47,18 +43,22 @@ body#virgin {
   #opera {
     .red {
       h1 {
-        font-size: 2em;
+        font-size: 1.2em;
+        font-weight: 400;
+        letter-spacing: 2px;
       }
       background-color: $red;
-      height: 100vh;
+      min-height: 100vh;
       color: white;
-      padding: $breather*4;
-      svg {
-        width: 4em;
-        height: 4em;
-        margin: 0 auto $breather * 4 auto;
-      }
+      padding: $breather*2 $breather*4;
+      text-align: center;
+
     } 
+  }
+
+  ul {
+    list-style-type: none;
+    padding-left: 0;
   }
 
 }
@@ -82,16 +82,90 @@ a.thief {
   height: 100vh;
   @include container();
   p.cut {
-    font-family: Georgia, 'Times New Roman', serif;
+    font-family: $serif-family;
     margin-bottom: $breather*6;
+    font-style: italic;
   }
 }
 
-#luxus {
+.poster {
+  font-family: $serif-family;
+
+  p.quote {
+    font-size: 1.2em;
+  }
+
+  .attribution {
+    display: block;
+    text-transform: uppercase;
+    font-size: .6em;
+    letter-spacing: 3px;
+    font-style: normal;
+    margin: $breather 0 0;
+  }
+
+}
+
+#loveless {
+   height: 100vh;
+   background: url("../img/loveless.jpg") no-repeat center center fixed;
+   -webkit-background-size: cover;
+   -moz-background-size: cover;
+   -o-background-size: cover;
+   background-size: cover;
+   p.quote {
+     color: #ffffff;
+     max-width: 300px;
+     font-style: italic;
+     margin: $breather*2;
+     padding: $breather;
+     border: 1px solid white;
+   }
+ }
+
+#duncan {
   height: 100vh;
-  background: url("../img/prototype.jpg") no-repeat center center fixed; 
+  background: url("../img/duncan.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover;   
+  background-size: cover;
+  p.quote {
+    color: white;
+    background-color: black;
+    max-width: 300px;
+    padding: $breather;
+    font-style: italic;
+  }
+}
+
+#eve {
+  height: 100vh;
+  background: url("../img/eve.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  p.quote {
+    color: darkred;
+    max-width: 300px;
+    padding: $breather;
+    font-style: italic;
+  }
+}
+
+#mother {
+  height: 100vh;
+  background: url("../img/mother.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  p.quote {
+    color: black;
+    background-color: white;
+    max-width: 300px;
+    padding: $breather;
+    font-style: italic;
+  }
 }

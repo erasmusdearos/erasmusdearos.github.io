@@ -1,10 +1,15 @@
+@import "variables";
+
+$serif-family: Garamond, Georgia, 'Times New Roman', serif;
+$sans-serif-family: 'Montserrat','Ubuntu', Helvetica, Arial, sans-serif;
+
 /* Typograhy
 ----------------- */
 html {font-size: 1em;}
 
 body {
   background-color: white;
-  font-family: 'Ubuntu', Helvetica, Arial, sans-serif;
+  font-family: $serif-family;
   font-weight: 400;
   line-height: 1.45;
   color: #333;
@@ -12,11 +17,21 @@ body {
 
 p {margin-bottom: 1.3em;}
 
+a {
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+}
+
 h1, h2, h3, h4 {
   margin: 0.5em 0;
   font-weight: inherit;
   line-height: 1.2;
-  font-family: 'Montserrat','Ubuntu', Helvetica, Arial, sans-serif;
+  font-family: $sans-serif-family;
 }
 
 // Scaled by 1.333 (Perfect fourth)
@@ -26,9 +41,40 @@ h1 {
   font-size: 2.441em;
   font-weight: 400;
   text-transform: uppercase;
+  span {
+    font-family: $serif-family;
+    text-transform: lowercase;
+    font-style: italic;
+  }
+
+  &.book-cover-title {
+    letter-spacing: 1em;
+    font-size: 1.8em;
+    font-family: $serif-family;
+    font-style: italic;
+
+  }
 }
 
-h2 {font-size: 1.953em;}
+h2 {font-size: 1.953em;
+
+  &.speared {
+    border-top: 1px solid #fff;
+    color: #fff;
+    font: 400 .8em/.8em $sans-serif-family;
+    margin: 2.5em 0 1.5em;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      background: $red;
+      padding: 0 .5em;
+      position: relative;
+      top: -0.4em;
+    }
+  }
+
+}
 
 h3 {font-size: 1.563em;}
 
