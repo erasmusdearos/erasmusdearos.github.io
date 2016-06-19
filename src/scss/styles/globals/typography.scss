@@ -27,6 +27,13 @@ a {
 
 }
 
+.miserere {
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+}
+
 h1, h2, h3, h4 {
   margin: 0.5em 0;
   font-weight: inherit;
@@ -48,7 +55,7 @@ h1 {
   }
 
   &.book-cover-title {
-    letter-spacing: 1em;
+    letter-spacing: .8em;
     font-size: 1.8em;
     font-family: $serif-family;
     font-style: italic;
@@ -79,6 +86,7 @@ h2 {font-size: 1.953em;
 h3 {font-size: 1.563em;}
 
 h4 {font-size: 1.25em;}
+
 
 p.label {
   font-size: .8em;

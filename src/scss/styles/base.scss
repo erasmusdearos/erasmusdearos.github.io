@@ -63,6 +63,12 @@ body#virgin {
 
 }
 
+p.cut {
+  font-family: $serif-family;
+  margin-bottom: $breather*6;
+  font-style: italic;
+}
+
 
 a.thief {
       @include button(3px, black, $breather);
@@ -79,13 +85,8 @@ a.thief {
 }
 
 #cocaine {
-  height: 100vh;
   @include container();
-  p.cut {
-    font-family: $serif-family;
-    margin-bottom: $breather*6;
-    font-style: italic;
-  }
+  height: 100vh;
 }
 
 .poster {
@@ -169,3 +170,72 @@ a.thief {
     font-style: italic;
   }
 }
+
+// MISERERE
+
+.filmbox {
+  @include container();
+
+  &-title {
+    text-transform: uppercase;
+    font-size: 1.1em;
+    text-align: left;
+    letter-spacing: 1px;
+    width: 100%;
+    margin-top: $breather;
+  }
+
+  ul, ol {
+    text-align: left;
+    width: 100%;  
+  }
+}
+
+.cast {
+  &-title {
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 1em;
+    color: $red;
+    letter-spacing: 2px;
+  }
+  &-subtitle {
+    color: $gray-dark;
+    text-align: left;
+    width: 100%;
+    font-size: .8em;
+  }  
+}
+
+
+
+a.want {
+      @include button(2px, black, $breather/2);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-family: Montserrat, Arial, sans-serif;
+      font-size: .9em;
+      text-decoration: none;
+      color: black;
+      &:hover {
+        border-color: black;
+        background-color: black;
+        color: white;
+      }
+}
+
+.miserere #yinyang {
+  @include container();
+}
+
+.shout {
+  text-align: center;
+  font-weight: 300;
+  color: $gray;
+  text-transform: uppercase;
+  a {
+    color: $gray;
+  }
+}
+
+
