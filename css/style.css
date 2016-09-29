@@ -3195,13 +3195,19 @@ a.thief {
   font-weight: 300;
   font-size: 1em;
   color: #B54646;
-  letter-spacing: 2px; }
+  letter-spacing: 2px;
+  margin-top: 1.5em; }
 
 .cast-subtitle {
   color: #333333;
   text-align: left;
   width: 100%;
   font-size: .8em; }
+
+.cast-call {
+  display: block;
+  background-color: #eeeeee;
+  padding: 1.5em; }
 
 a.want {
   border: 2px solid black;

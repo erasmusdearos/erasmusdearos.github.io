@@ -4,7 +4,7 @@ $breather : 1.5em;
 
 
 @mixin container() {
-  max-width: 30em; 
+  max-width: 30em;
   margin: $breather auto;
 }
 
@@ -20,7 +20,7 @@ $breather : 1.5em;
 }
 
 #yinyang {
-  height: 100vh;  
+  height: 100vh;
 
   .black {
     background-color: black;
@@ -34,11 +34,11 @@ $breather : 1.5em;
 }
 
 body#virgin {
-   background: url("../img/bs1-invert-noise2.jpg") no-repeat center center fixed; 
+   background: url("../img/bs1-invert-noise2.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
-  background-size: cover; 
+  background-size: cover;
 
   #opera {
     .red {
@@ -53,7 +53,7 @@ body#virgin {
       padding: $breather*2 $breather*4;
       text-align: center;
 
-    } 
+    }
   }
 
   ul {
@@ -187,7 +187,7 @@ a.thief {
 
   ul, ol {
     text-align: left;
-    width: 100%;  
+    width: 100%;
   }
 }
 
@@ -198,13 +198,20 @@ a.thief {
     font-size: 1em;
     color: $red;
     letter-spacing: 2px;
+    margin-top: $breather;
   }
   &-subtitle {
     color: $gray-dark;
     text-align: left;
     width: 100%;
     font-size: .8em;
-  }  
+  }
+
+  &-call {
+    display: block;
+    background-color: $gray-lightest;
+    padding: $breather;
+  }
 }
 
 
@@ -237,5 +244,3 @@ a.want {
     color: $gray;
   }
 }
-
-
